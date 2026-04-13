@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  /* A fonte sans agora é controlada pelo `next/font` no layout.tsx através da variável --font-sans */
+  --font-sans: var(--font-sans, ui-sans-serif, system-ui, sans-serif);
+
+  /* Cores minimalistas dark (tipo Vercel/Linear) */
+  --color-chakra-bg: #09090b;
+  --color-chakra-bg-darker: #000000;
+  --color-chakra-text: #fafafa;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    /* Mantém o escopo da fonte sans e usa o texto claro inspirado no Chakra */
+    @apply font-sans text-chakra-text antialiased;
+
+    /* Fundo modernizado: preto absoluto com gradientes elípticos ultra-suaves (glass mesh) */
+    background-color: var(--color-chakra-bg-darker);
+    background-image: 
+      radial-gradient(ellipse 80% 50% at 50% -20%, rgba(120, 119, 198, 0.15), transparent),
+      radial-gradient(ellipse 50% 50% at 80% 100%, rgba(45, 212, 191, 0.05), transparent),
+      radial-gradient(ellipse 50% 50% at 20% 100%, rgba(99, 102, 241, 0.05), transparent);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+}
