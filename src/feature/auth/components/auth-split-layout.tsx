@@ -19,18 +19,18 @@ export function AuthSplitLayout({ children }: AuthSplitLayoutProps) {
       w="100vw"
       align="center"
       justify="center"
-      bg="#050505"
+      bg="surface.canvas"
       p={{ base: 4, md: 8, lg: 12 }}
     >
       <SimpleGrid
         columns={{ base: 1, lg: 2 }}
         w="full"
         maxW="6xl"
-        bg="#0C0C0E"
+        bg="surface.panel"
         borderRadius="3xl"
         border="1px solid"
-        borderColor="whiteAlpha.100"
-        boxShadow="0 40px 100px -20px rgba(0, 0, 0, 0.8), inset 0 1px 1px rgba(255, 255, 255, 0.05)"
+        borderColor="surface.border"
+        boxShadow="0 32px 80px -28px rgba(15, 23, 42, 0.16), 0 1px 0 rgba(255, 255, 255, 0.8) inset"
         overflow="hidden"
         minH={{ lg: "800px" }}
       >
@@ -41,12 +41,12 @@ export function AuthSplitLayout({ children }: AuthSplitLayoutProps) {
           transition={{ duration: 0.6, ease: "easeOut" }}
           position="relative"
           display={{ base: "none", lg: "block" }}
-          bg="black"
+          bg="surface.950"
           m={3}
           borderRadius="2xl"
           overflow="hidden"
           border="1px solid"
-          borderColor="whiteAlpha.50"
+          borderColor="surface.borderStrong"
         >
           <Box position="absolute" inset={0} zIndex={1}>
             <Image
@@ -96,9 +96,9 @@ export function AuthSplitLayout({ children }: AuthSplitLayoutProps) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.6 }}
             >
-              <Text fontSize="lg" color="whiteAlpha.700" fontWeight="medium">
-                Gerencie suas tarefas, projetos e objetivos em um único fluxo de
-                trabalho elegante e minimalista.
+              <Text fontSize="lg" color="whiteAlpha.800" fontWeight="medium">
+                Gerencie suas tarefas, projetos e objetivos em um único fluxo de trabalho elegante e
+                minimalista.
               </Text>
             </motion.div>
           </VStack>
@@ -114,7 +114,11 @@ export function AuthSplitLayout({ children }: AuthSplitLayoutProps) {
           p={{ base: 8, md: 16, lg: 20 }}
           position="relative"
         >
-          <Box position="absolute" inset={0} bg="radial-gradient(circle at 50% 50%, rgba(255,255,255,0.02) 0%, transparent 70%)" />
+          <Box
+            position="absolute"
+            inset={0}
+            bg="radial-gradient(circle at 50% 50%, rgba(37,99,235,0.06) 0%, transparent 70%)"
+          />
           <Box w="full" maxW="md" position="relative" zIndex={1}>
             {children}
           </Box>
@@ -123,4 +127,3 @@ export function AuthSplitLayout({ children }: AuthSplitLayoutProps) {
     </Flex>
   );
 }
-

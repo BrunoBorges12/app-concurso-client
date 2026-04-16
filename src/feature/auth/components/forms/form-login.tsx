@@ -17,10 +17,10 @@ export function FormLogin() {
     <Box w="full" bg="transparent">
       <Stack gap={10}>
         <Stack gap={3} align="flex-start" textAlign="left">
-          <Heading size="3xl" fontWeight="black" letterSpacing="tight" color="white">
+          <Heading size="3xl" fontWeight="black" letterSpacing="tight" color="text.primary">
             Acessar Plataforma
           </Heading>
-          <Text color="gray.400" fontSize="md" maxW="sm">
+          <Text color="text.secondary" fontSize="md" maxW="sm">
             Bem-vindo de volta. Informe seus dados para entrar na sua conta.
           </Text>
         </Stack>
@@ -34,13 +34,13 @@ export function FormLogin() {
                 status="error"
                 borderRadius="md"
                 variant="subtle"
-                bg="red.900/30"
-                borderColor="red.400/30"
+                bg="red.50"
+                borderColor="red.200"
                 borderWidth="1px"
               >
                 <Alert.Indicator color="red.400" />
                 <Alert.Content>
-                  <Alert.Title color="red.100" fontSize="sm">
+                  <Alert.Title color="red.700" fontSize="sm">
                     {submitError}
                   </Alert.Title>
                 </Alert.Content>
@@ -68,44 +68,25 @@ export function FormLogin() {
               <Flex justify="flex-start" mt={-2}>
                 <Link
                   fontSize="sm"
-                  color="teal.300"
+                  color="blue.fg"
                   fontWeight="medium"
-                  _hover={{ color: "teal.200" }}
+                  _hover={{ color: "blue.800" }}
                 >
                   Esqueceu a senha?
                 </Link>
               </Flex>
             )}
 
-            <Button
-              type="submit"
-              loading={isPending}
-              size="xl"
-              h={14}
-              w="full"
-              bg="white"
-              color="black"
-              borderRadius="xl"
-              mt={4}
-              fontWeight="bold"
-              fontSize="md"
-              _hover={{
-                bg: "gray.200",
-                transform: "translateY(-1px)",
-                boxShadow: "0 8px 20px rgba(255,255,255,0.15)",
-              }}
-              _active={{ transform: "translateY(0)" }}
-              transition="all 0.2s cubic-bezier(.175,.885,.32,1.275)"
-            >
+            <Button type="submit" loading={isPending} size="xl" w="full" mt={4}>
               {submitLabel}
             </Button>
 
-            <Text textAlign="center" color="gray.400" fontSize="sm" mt={6}>
+            <Text textAlign="center" color="text.secondary" fontSize="sm" mt={6}>
               {currentMode === "sign-in" ? "Ainda não tem conta?" : "Já possui uma conta?"}{" "}
               <Link
                 as="button"
                 type="button"
-                color="white"
+                color="blue.fg"
                 fontWeight="bold"
                 _hover={{ textDecoration: "underline" }}
               >

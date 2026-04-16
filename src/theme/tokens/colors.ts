@@ -1,0 +1,28 @@
+export const colors = {
+  brand: {
+    50: { value: "#eff6ff" },
+    100: { value: "#dbeafe" },
+    200: { value: "#bfdbfe" },
+    300: { value: "#93c5fd" },
+    400: { value: "#60a5fa" },
+    500: { value: "#3b82f6" },
+    600: { value: "#2563eb" },
+    700: { value: "#1d4ed8" },
+    800: { value: "#1e40af" },
+    900: { value: "#1e3a8a" },
+    950: { value: "#172554" },
+  },
+  surface: {
+    50: { value: "#ffffff" },
+    100: { value: "#f8fafc" },
+    200: { value: "#f1f5f9" },
+    300: { value: "#e2e8f0" },
+    400: { value: "#cbd5e1" },
+    500: { value: "#94a3b8" },
+    600: { value: "#64748b" },
+    700: { value: "#475569" },
+    800: { value: "#334155" },
+    900: { value: "#1e293b" },
+    950: { value: "#0f172a" },
+  },
+};

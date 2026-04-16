@@ -27,30 +27,9 @@ export interface TextInputProps extends InputProps {
   inputGroupProps?: Omit<InputGroupProps, "children" | "startElement" | "endElement">;
 }
 
-const defaultLabelProps = {
-  color: "gray.300",
-  fontSize: "13px",
-  fontWeight: "semibold",
-  textTransform: "uppercase",
-  letterSpacing: "wider",
-} satisfies FieldLabelProps;
-
 const defaultInputProps = {
   size: "xl",
-  bg: "whiteAlpha.100",
-  borderColor: "whiteAlpha.200",
-  color: "white",
-  borderRadius: "xl",
-  h: 14,
-  px: 4,
-  transition: "all 0.2s",
-  _placeholder: { color: "whiteAlpha.400" },
-  _hover: { borderColor: "teal.400", bg: "whiteAlpha.200" },
-  _focusVisible: {
-    borderColor: "teal.400",
-    outline: "none",
-    boxShadow: "0 0 0 1px var(--chakra-colors-teal-400)",
-  },
+  variant: "outline",
 } satisfies InputProps;
 
 export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(function TextInput(
@@ -79,9 +58,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(function T
     <Field.Root {...rootProps} invalid={isInvalid}>
       {label ? (
         <Flex justify="space-between" align="baseline" w="full" mb={1}>
-          <Field.Label {...defaultLabelProps} {...labelProps}>
-            {label}
-          </Field.Label>
+          <Field.Label {...labelProps}>{label}</Field.Label>
           {labelEndElement}
         </Flex>
       ) : null}
