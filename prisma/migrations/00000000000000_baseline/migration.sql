@@ -1,0 +1,3 @@
+-- Baseline for an existing database where backend tables are managed by Alembic.
+-- This migration is intentionally empty. Prisma starts managing Better Auth
+-- tables in later migrations.

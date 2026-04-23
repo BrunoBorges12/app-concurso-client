@@ -6,6 +6,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
+  schemas  = ["better_auth"]
 }
 
 model User {
@@ -20,6 +21,7 @@ model User {
   sessions      Session[]
 
   @@map("user")
+  @@schema("better_auth")
 }
 
 model Session {
@@ -35,6 +37,7 @@ model Session {
 
   @@index([userId])
   @@map("session")
+  @@schema("better_auth")
 }
 
 model Account {
@@ -56,6 +59,7 @@ model Account {
   @@unique([providerId, accountId])
   @@index([userId])
   @@map("account")
+  @@schema("better_auth")
 }
 
 model Verification {
@@ -69,4 +73,5 @@ model Verification {
   @@unique([identifier, value])
   @@index([identifier])
   @@map("verification")
+  @@schema("better_auth")
 }
